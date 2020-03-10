@@ -18,9 +18,8 @@ const INITIAL_STATE={
       case NEW_TEXT_ASYNC:
         return{
           ...state,
-          idCount: 0,
+          idCount: state.idCount = 0,
           idTitle: state.idTitle + 1,
-          idCount: state.idCount + 1, 
           title: state.title.concat({id: state.idTitle, titleName: action.title}),
           history: state.history.concat({id: action.id, titleName: action.title, filename: action.filename, time: action.time})
         };
