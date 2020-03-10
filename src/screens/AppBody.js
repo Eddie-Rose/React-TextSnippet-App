@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
         width: 1000,
         autoCompleteType: 'off',
         multiline: 'true',
+        numberOfLines: 20,
         borderWidth: 2,
         borderRadius: 5,
         borderColor: 'gray',
@@ -121,12 +122,12 @@ const mapDispatchToProps = dispatch => ({
     onSaveText: (id, storedText,title, time) => dispatch(saveText(id, storedText, title, time)),
     onCreateText: (id, storedText, title, time) => dispatch(newText(id, storedText, title, time)),
     changeDisplayTitle: (displayBoolValue) => dispatch(displayTitle(displayBoolValue)),
-})
+});
   
 const mapStateToProps = state => ({
     fileR: state.fileReducer,
     fileRidCount: state.fileReducer.idCount,
     dispR: state.displayReducer.showTitle
-})
+});
   
 export default connect(mapStateToProps, mapDispatchToProps)(AppBody)
