@@ -43,7 +43,7 @@ class AppBody extends Component {
                         <form id="create-text-form" onSubmit={this.onTextSubmit}>
                             <div className = "text-container">
                                 <View style={styles.titleInputView}>
-                                    <TextInput style={[styles.titleInput, , { backgroundColor: this.props.dispR ? '#FFF' : '#C0C0C0' }]} id= "textTitle" name = "title" placeholder="Write a title" disabled={!this.props.dispR}></TextInput >
+                                    <TextInput style={[styles.titleInput, { backgroundColor: this.props.dispR ? '#FFF' : '#C0C0C0' }]} id= "textTitle" name = "title" placeholder="Write a title" disabled={!this.props.dispR}></TextInput >
                                 </View>
                                 <View style={styles.contentInputView}>
                                     <TextInput style={styles.contentInput} className="input" name ="input" placeholder="Write something then save..." autoComplete="off"></TextInput>
@@ -60,6 +60,10 @@ class AppBody extends Component {
                 <div className="latest-text-container">
                     <LatestText object={this.props.fileR.history[Object.keys(this.props.fileR.history)[this.props.fileR.history.length - 1]]}></LatestText>
                 </div> 
+                <View>
+                    <Text style={styles.titleText} >History</Text>
+
+                </View>
             </View>
         )
     }
