@@ -61,7 +61,7 @@ class AppBody extends Component {
                     <LatestText object={this.props.fileR.history[Object.keys(this.props.fileR.history)[this.props.fileR.history.length - 1]]}></LatestText>
                 </div> 
                 <View>
-                    <Text style={styles.titleText} >History</Text>
+                    {/* <Text style={styles.titleText} >History</Text> */}
 
                 </View>
             </View>
